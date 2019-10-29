@@ -220,7 +220,7 @@
         },
         "customPsScript": {
             "type": "String",
-            "defaultValue": "https://hybrblob.blob.core.windows.net/blobfile/StartDeployment.ps1?sp=r&st=2019-10-14T07:21:03Z&se=2019-10-18T15:21:03Z&spr=https,http&sv=2018-03-28&sig=Eim763T7ojMXnl83fpd0nqwzm4YzTkNUhbh9l%2BcGtuI%3D&sr=b"
+            "defaultValue": "https://hybrfile.blob.core.windows.net/hybrfiles/StartDeployment.ps1?sp=r&st=2019-10-29T11:13:16Z&se=2019-11-08T19:13:16Z&spr=https,http&sv=2019-02-02&sr=b&sig=SOagNuySU8PpI9fE6HtWutug5M1g0ufA8jgk4tUOWEE%3D"
         }
     },
     "variables": {
