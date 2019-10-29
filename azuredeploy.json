@@ -1,0 +1,559 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "String",
+            "defaultValue": "southeastasia",
+            "allowedValues": [
+              "East US",
+              "East US 2",
+              "South Central US",
+              "West US 2",
+              "Central US",
+              "North Central US",
+              "West US",
+              "South Africa North",
+              "Australia East",
+              "Southeast Asia",
+              "Central India",
+              "East Asia",
+              "Japan East",
+              "Korea Central",
+              "Canada Central",
+              "North Europe",
+              "UK South",
+              "West Europe",
+              "France Central",
+              "Germany West Central",
+              "Switzerland North",
+              "Brazil South",
+              "West Central US",
+              "South Africa West",
+              "Australia Central",
+              "Australia Central 2",
+              "Australia Southeast",
+              "Japan West",
+              "Korea South",
+              "South India",
+              "West India",
+              "Canada East",
+              "France South",
+              "Germany North",
+              "Switzerland West",
+              "UK West",
+              "Norway East",
+              "Norway West",
+              "UAE Central",
+              "UAE North"
+            ]
+        },
+        "virtualMachineName": {
+            "type": "String",
+            "defaultValue": "hybrtrial1"
+        },
+        "virtualMachineSize": {
+            "type": "String",
+            "defaultValue": "Standard_D2_v2",
+            "allowedValues": [
+                "Standard_B1ls",
+                "Standard_B1ms",
+                "Standard_B1s",
+                "Standard_B2ms",
+                "Standard_B2s",
+                "Standard_DS1_v2",
+                "Standard_DS2_v2",
+                "Standard_DS3_v2"
+            ]
+        },
+        "adminUsername": {
+            "type": "String",
+            "defaultValue": "caadmin"
+        },
+        "virtualNetworkName": {
+            "type": "String",
+            "defaultValue": "hybrtrial1-vnet"
+        },
+        "networkInterfaceName": {
+            "type": "String",
+            "defaultValue": "hybrtrial1-nic"
+        },
+        "networkSecurityGroupName": {
+            "type": "String",
+            "defaultValue": "hybrtrial1-nsg"
+        },
+        "adminPassword": {
+            "type": "SecureString",
+            "defaultValue": "Kottee2050Cbe"
+        },
+        "subnetName": {
+            "type": "String",
+            "defaultValue": "default"
+        },
+        "publicIpAddressName": {
+            "type": "String",
+            "defaultValue": "hybrtrial1-ip"
+        },
+        "publicIpAddressType": {
+            "type": "String",
+            "defaultValue": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "type": "String",
+            "defaultValue": "Basic"
+        },
+        "dbMaxSizeBytes": {
+            "type": "String",
+            "defaultValue": "2147483648"
+        },
+        "dbServerName": {
+            "type": "String",
+            "defaultValue": "trisultrialsqlserver"
+        },
+        "dbServerLocation": {
+            "type": "String",
+            "defaultValue": "southeastasia"
+        },
+        "dbServerUserName": {
+            "type": "String",
+            "defaultValue": "caadmin"
+        },
+        "dbServerPassword": {
+            "type": "SecureString",
+            "defaultValue": "Kottee2050Cbe"
+        },
+        "dbCollation": {
+            "type": "String",
+            "defaultValue": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        "hybrDatabaseName": {
+            "type": "String",
+            "defaultValue": "Hybr"
+        },
+        "vconnectDatabaseName": {
+            "type": "String",
+            "defaultValue": "VConnect"
+        },
+        "billingDatabaseName": {
+            "type": "String",
+            "defaultValue": "Billing"
+        },
+        "ServiceCatalogDB": {
+            "type": "String",
+            "defaultValue": "ServiceCatalogDB"
+        },
+        "RMSStoreDB": {
+            "type": "String",
+            "defaultValue": "RMSStoreDB"
+        },
+        "RMSResoruceManagerDB": {
+            "type": "String",
+            "defaultValue": "RMSResoruceManagerDB"
+        },
+        "RMSTrackingDB": {
+            "type": "String",
+            "defaultValue": "RMSTrackingDB"
+        },
+        "AADClientID": {
+            "type": "String",
+            "defaultValue": "ddf09c62-40d0-46a1-81e9-5593a289fa74"
+        },
+        "AADClientSecretID": {
+            "type": "String",
+            "defaultValue": "TAAYfCn?J6DcHKtDNhfvj6n7n:LO:z?0"
+        },
+        "SubDomainName": {
+            "type": "String",
+            "defaultValue": "demo"
+        },
+        "AdminUserMail": {
+            "type": "String",
+            "defaultValue": "venkatr@cloudassert.com"
+        },
+        "Orgname": {
+            "type": "String",
+            "defaultValue": "CA"
+        },
+        "Issuer_URL": {
+            "type": "String",
+            "defaultValue": "https://sts.windows.net/95166198-b865-4294-8d11-496c85b7978a/"
+        },
+        "HybrEndPoint": {
+            "type": "String",
+            "defaultValue": "https://tidel.admin.hybr.com"
+        },
+        "HybrApiKey": {
+            "type": "String",
+            "defaultValue": "hybradmin"
+        },
+        "HybrApiSecret": {
+            "type": "String",
+            "defaultValue": "pass@word1"
+        },
+        "SMTPServername": {
+            "type": "String",
+            "defaultValue": "smtp.office365.com"
+        },
+        "SMTPPortNo": {
+            "type": "String",
+            "defaultValue": "587"
+        },
+        "SMTPUserName": {
+            "type": "String",
+            "defaultValue": "demo@ca.com"
+        },
+        "STMPPassword": {
+            "type": "String",
+            "defaultValue": "pass@word1"
+        },
+        "SMTPFrom": {
+            "type": "String",
+            "defaultValue": "demo@ca.com"
+        },
+        "dbEdition": {
+            "type": "String",
+            "defaultValue": "Basic"
+        },
+        "dbRequestedServiceObjectiveId": {
+            "type": "String",
+            "defaultValue": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c"
+        },
+        "customPsScript": {
+            "type": "String",
+            "defaultValue": "https://hybrblob.blob.core.windows.net/blobfile/StartDeployment.ps1?sp=r&st=2019-10-14T07:21:03Z&se=2019-10-18T15:21:03Z&spr=https,http&sv=2018-03-28&sig=Eim763T7ojMXnl83fpd0nqwzm4YzTkNUhbh9l%2BcGtuI%3D&sr=b"
+        }
+    },
+    "variables": {
+        "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
+        "vnetPrefix": "10.0.0.0/16",
+        "vnetSubnet1Name": "[parameters('subnetName')]",
+        "vnetSubnet1Prefix": "10.0.0.0/24",
+        "firstFileName": "StartDeployment.ps1",
+        "arguments": "[concat('-dbServerName ', parameters('dbServerName'), ' -dbServerUserName ', parameters('dbServerUserName'), ' -dbServerPassword ', parameters('dbServerPassword'), ' -hybrDatabaseName ', parameters('hybrDatabaseName'), ' -vconnectDatabaseName ', parameters('vconnectDatabaseName'), ' -billingDatabaseName ', parameters('billingDatabaseName'), ' -ServiceCatalogDB ', parameters('ServiceCatalogDB'), ' -RMSStoreDB ', parameters('RMSStoreDB'), ' -RMSResoruceManagerDB ', parameters('RMSResoruceManagerDB'), ' -RMSTrackingDB ', parameters('RMSTrackingDB'), ' -AADClientID ', parameters('AADClientID'), ' -AADClientSecretID ', parameters('AADClientSecretID'), ' -SubDomainName ',parameters('SubDomainName'), ' -AdminUserMail ', parameters('AdminUserMail'), ' -Orgname ', parameters('Orgname'), ' -Issuer_URL ', parameters('Issuer_URL'), ' -HybrEndPoint ', parameters('HybrEndPoint'), ' -HybrApiKey ', parameters('HybrApiKey'), ' -HybrApiSecret ', parameters('HybrApiSecret'), ' -SMTPServername ', parameters('SMTPServername'), ' -SMTPPortNo ', parameters('SMTPPortNo'), ' -SMTPUserName ', parameters('SMTPUserName'), ' -STMPPassword ', parameters('STMPPassword'), ' -SMTPFrom ', parameters('SMTPFrom'))]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2016-04-30-preview",
+            "name": "[parameters('virtualMachineName')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('hybrDatabaseName'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('vconnectDatabaseName'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('billingDatabaseName'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('ServiceCatalogDB'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('RMSStoreDB'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('RMSResoruceManagerDB'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('dbServerName'), parameters('RMSTrackingDB'))]",
+                "[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]"
+            ],
+            "properties": {
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachineName')]",
+                    "adminUsername": "[parameters('adminUsername')]",
+                    "adminPassword": "[parameters('adminPassword')]",
+                    "windowsConfiguration": {
+                        "provisionVmAgent": "true"
+                    }
+                },
+                "hardwareProfile": {
+                    "vmSize": "[parameters('virtualMachineSize')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2016-Datacenter",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "createOption": "fromImage",
+                        "managedDisk": {
+                            "storageAccountType": "Standard_LRS"
+                        }
+                    },
+                    "dataDisks": []
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName'))]"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2015-06-15",
+            "name": "[concat(parameters('virtualMachineName'),'/CustomScriptExtension')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+            ],
+            "properties": {
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.9",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "fileUris": "[split(parameters('customPsScript'), ' ')]"
+                },
+                "protectedSettings": {
+                    "commandToExecute": "[concat ('powershell -ExecutionPolicy Bypass -File ', variables('firstFileName'), ' ', variables('arguments'))]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2016-09-01",
+            "name": "[parameters('networkInterfaceName')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]",
+                "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]"
+            ],
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "properties": {
+                            "subnet": {
+                                "id": "[variables('subnetRef')]"
+                            },
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIpAddress": {
+                                "id": "[resourceId(resourceGroup().name,'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
+                            }
+                        }
+                    }
+                ],
+                "networkSecurityGroup": {
+                    "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/publicIpAddresses",
+            "apiVersion": "2017-08-01",
+            "name": "[parameters('publicIpAddressName')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "[parameters('publicIpAddressSku')]"
+            },
+            "properties": {
+                "publicIpAllocationMethod": "[parameters('publicIpAddressType')]"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "2017-06-01",
+            "name": "[parameters('networkSecurityGroupName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "default-allow-rdp",
+                        "properties": {
+                            "priority": 1000,
+                            "protocol": "TCP",
+                            "access": "Allow",
+                            "direction": "Inbound",
+                            "sourceAddressPrefix": "*",
+                            "sourcePortRange": "*",
+                            "destinationAddressPrefix": "*",
+                            "destinationPortRange": "3389"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Sql/servers",
+            "apiVersion": "2014-04-01",
+            "name": "[parameters('dbServerName')]",
+            "location": "[parameters('dbServerLocation')]",
+            "tags": {
+                "displayName": "SqlServer"
+            },
+            "properties": {
+                "administratorLogin": "[parameters('dbServerusername')]",
+                "administratorLoginPassword": "[parameters('dbServerPassword')]",
+                "version": "12.0"
+            },
+            "resources": [
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('hybrDatabaseName')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('vconnectDatabaseName')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('billingDatabaseName')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('ServiceCatalogDB')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('RMSStoreDB')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('RMSResoruceManagerDB')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "databases",
+                    "apiVersion": "2015-01-01",
+                    "name": "[parameters('RMSTrackingDB')]",
+                    "location": "[parameters('dbServerLocation')]",
+                    "dependsOn": [
+                        "[parameters('dbServerName')]"
+                    ],
+                    "tags": {
+                        "displayName": "Database"
+                    },
+                    "properties": {
+                        "collation": "[parameters('dbCollation')]",
+                        "edition": "[parameters('dbEdition')]",
+                        "maxSizeBytes": "[parameters('dbMaxSizeBytes')]",
+                        "requestedServiceObjectiveId": "[parameters('dbRequestedServiceObjectiveId')]"
+                    }
+                },
+                {
+                    "type": "firewallrules",
+                    "apiVersion": "2014-04-01-preview",
+                    "name": "AllowAllWindowsAzureIps",
+                    "location": "[parameters('dbserverLocation')]",
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', parameters('dbServerName'))]"
+                    ],
+                    "properties": {
+                        "endIpAddress": "0.0.0.0",
+                        "startIpAddress": "0.0.0.0"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2015-06-15",
+            "name": "[parameters('virtualNetworkName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [],
+            "tags": {
+                "displayName": "vnet"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('vnetPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('vnetSubnet1Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('vnetSubnet1Prefix')]"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {
+        "adminUsername": {
+            "type": "String",
+            "value": "[parameters('adminUsername')]"
+        }
+    }
+}

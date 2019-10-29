@@ -1,0 +1,132 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "southeastasia"
+    },
+    "virtualMachineName": {
+      "value": "Trisultrialvm"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_D2_v2"
+    },
+    "adminUsername": {
+      "value": "caadmin"
+    },
+    "virtualNetworkName": {
+      "value": "trisultrial-vnet"
+    },
+    "networkInterfaceName": {
+      "value": "trisultrial-nic"
+    },
+    "networkSecurityGroupName": {
+      "value": "trisultrial-nsg"
+    },
+    "adminPassword": {
+      "value": "Kottee2050Cbe"
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "publicIpAddressName": {
+      "value": "trisultrial-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Dynamic"
+    },
+    "publicIpAddressSku": {
+      "value": "Basic"
+    },
+    "dbMaxSizeBytes": {
+      "value": "2147483648"
+    },
+    "dbServerName": {
+      "value": "trisultrialsqlserver"
+    },
+    "dbServerLocation": {
+      "value": "southeastasia"
+    },
+    "dbServerUserName": {
+      "value": "caadmin"
+    },
+    "dbServerPassword": {
+      "value": "Kottee2050Cbe"
+    },
+    "dbCollation": {
+      "value": "SQL_Latin1_General_CP1_CI_AS"
+    },
+    "hybrDatabaseName": {
+      "value": "Hybr"
+    },
+    "vconnectDatabaseName": {
+      "value": "VConnect"
+    },
+    "billingDatabaseName": {
+      "value": "Billing"
+    },
+    "ServiceCatalogDB": {
+      "value": "ServiceCatalogDB"
+    },
+    "RMSStoreDB": {
+      "value": "RMSStoreDB"
+    },
+    "RMSResoruceManagerDB": {
+      "value": "RMSResoruceManagerDB"
+    },
+    "RMSTrackingDB": {
+      "value": "RMSTrackingDB"
+    },
+    "AADClientID": {
+      "value": "ddf09c62-40d0-46a1-81e9-5593a289fa74"
+    },
+    "AADClientSecretID": {
+      "value": "TAAYfCn?J6DcHKtDNhfvj6n7n:LO:z?0"
+    },
+    "SubDomainName": {
+      "value": "demo"
+    },
+    "AdminUserMail": {
+      "value": "venkatr@cloudassert.com"
+    },
+    "Orgname": {
+      "value": "CA"
+    },
+    "Issuer_URL": {
+      "value": "https://sts.windows.net/95166198-b865-4294-8d11-496c85b7978a/"
+    },
+    "HybrEndPoint": {
+      "value": "https://tidel.admin.hybr.com"
+    },
+    "HybrApiKey": {
+      "value": "hybradmin"
+    },
+    "HybrApiSecret": {
+      "value": "pass@word1"
+    },
+    "SMTPServername": {
+      "value": "smtp.office365.com"
+    },
+    "SMTPPortNo": {
+      "value": "587"
+    },
+    "SMTPUserName": {
+      "value": "demo@ca.com"
+    },
+    "STMPPassword": {
+      "value": "pass@word1"
+    },
+    "SMTPFrom": {
+      "value": "demo@ca.com"
+    },
+    "dbEdition": {
+      "value": "Basic"
+    },
+    "dbRequestedServiceObjectiveId": {
+      "value": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c"
+    },
+    "customPsScript": {
+      "value": "https://hybrfile.blob.core.windows.net/hybrfiles/StartDeployment.ps1?sp=r&st=2019-10-24T10:59:48Z&se=2019-10-25T18:59:48Z&spr=https,http&sv=2019-02-02&sr=b&sig=kuV0TtzHIdu3mGeYxsVmBLRB6zaEAk90cEggogctuHw%3D"
+    }
+  }
+}
