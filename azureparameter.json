@@ -3,25 +3,25 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": {
-      "value": "southeastasia"
+      "value": "Southeast Asia"
     },
     "virtualMachineName": {
-      "value": "Trisultrialvm"
+      "value": "hybrdemo"
     },
     "virtualMachineSize": {
-      "value": "Standard_D2_v2"
+      "value": "Standard_DS2_v2"
     },
     "adminUsername": {
       "value": "caadmin"
     },
     "virtualNetworkName": {
-      "value": "trisultrial-vnet"
+      "value": "hybrdemo-vnet"
     },
     "networkInterfaceName": {
-      "value": "trisultrial-nic"
+      "value": "hybrdemo-nic"
     },
     "networkSecurityGroupName": {
-      "value": "trisultrial-nsg"
+      "value": "hybrdemo-nsg"
     },
     "adminPassword": {
       "value": "Kottee2050Cbe"
@@ -30,7 +30,7 @@
       "value": "default"
     },
     "publicIpAddressName": {
-      "value": "trisultrial-ip"
+      "value": "hybrdemo-ip"
     },
     "publicIpAddressType": {
       "value": "Dynamic"
@@ -42,7 +42,7 @@
       "value": "2147483648"
     },
     "dbServerName": {
-      "value": "trisultrialsqlserver"
+      "value": "hybrdemosqlserver"
     },
     "dbServerLocation": {
       "value": "southeastasia"
@@ -78,10 +78,10 @@
       "value": "RMSTrackingDB"
     },
     "AADClientID": {
-      "value": "ddf09c62-40d0-46a1-81e9-5593a289fa74"
+      "value": "e638eb2b-70c4-4ab1-b140-d3676e96cce2"
     },
     "AADClientSecretID": {
-      "value": "TAAYfCn?J6DcHKtDNhfvj6n7n:LO:z?0"
+      "value": "88mBuLv.RCQyCo4j:/KZJilB1a/A]]C:"
     },
     "SubDomainName": {
       "value": "demo"
@@ -96,7 +96,7 @@
       "value": "https://sts.windows.net/95166198-b865-4294-8d11-496c85b7978a/"
     },
     "HybrEndPoint": {
-      "value": "https://tidel.admin.hybr.com"
+      "value": "https://demo.admin.hybr.com"
     },
     "HybrApiKey": {
       "value": "hybradmin"
@@ -126,7 +126,7 @@
       "value": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c"
     },
     "customPsScript": {
-      "value": "https://hybrfile.blob.core.windows.net/hybrfiles/StartDeployment.ps1?sp=r&st=2019-10-24T10:59:48Z&se=2019-10-25T18:59:48Z&spr=https,http&sv=2019-02-02&sr=b&sig=kuV0TtzHIdu3mGeYxsVmBLRB6zaEAk90cEggogctuHw%3D"
+      "value": "https://hybrfile.blob.core.windows.net/hybrfiles/StartDeployment.ps1?sp=r&st=2019-10-31T12:19:19Z&se=2019-11-06T20:19:19Z&spr=https,http&sv=2019-02-02&sr=b&sig=EsTQeBrMAJwqou0gP9I8LCCrOTd7EHjzQXfIcfkq1Cw%3D"
     }
   }
 }
