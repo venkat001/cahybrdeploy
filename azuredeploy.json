@@ -3,57 +3,56 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "String",
             "defaultValue": "southeastasia",
             "allowedValues": [
-              "East US",
-              "East US 2",
-              "South Central US",
-              "West US 2",
-              "Central US",
-              "North Central US",
-              "West US",
-              "South Africa North",
-              "Australia East",
-              "Southeast Asia",
-              "Central India",
-              "East Asia",
-              "Japan East",
-              "Korea Central",
-              "Canada Central",
-              "North Europe",
-              "UK South",
-              "West Europe",
-              "France Central",
-              "Germany West Central",
-              "Switzerland North",
-              "Brazil South",
-              "West Central US",
-              "South Africa West",
-              "Australia Central",
-              "Australia Central 2",
-              "Australia Southeast",
-              "Japan West",
-              "Korea South",
-              "South India",
-              "West India",
-              "Canada East",
-              "France South",
-              "Germany North",
-              "Switzerland West",
-              "UK West",
-              "Norway East",
-              "Norway West",
-              "UAE Central",
-              "UAE North"
-            ]
+                "East US",
+                "East US 2",
+                "South Central US",
+                "West US 2",
+                "Central US",
+                "North Central US",
+                "West US",
+                "South Africa North",
+                "Australia East",
+                "Southeast Asia",
+                "Central India",
+                "East Asia",
+                "Japan East",
+                "Korea Central",
+                "Canada Central",
+                "North Europe",
+                "UK South",
+                "West Europe",
+                "France Central",
+                "Germany West Central",
+                "Switzerland North",
+                "Brazil South",
+                "West Central US",
+                "South Africa West",
+                "Australia Central",
+                "Australia Central 2",
+                "Australia Southeast",
+                "Japan West",
+                "Korea South",
+                "South India",
+                "West India",
+                "Canada East",
+                "France South",
+                "Germany North",
+                "Switzerland West",
+                "UK West",
+                "Norway East",
+                "Norway West",
+                "UAE Central",
+                "UAE North"
+            ],
+            "type": "String"
         },
         "virtualMachineName": {
-            "type": "String",
-            "defaultValue": "hybrtrial1"
+            "defaultValue": "hybrtrial1",
+            "type": "String"
         },
         "virtualMachineSize": {
-            "type": "String",
             "defaultValue": "Standard_D2_v2",
             "allowedValues": [
                 "Standard_B1ls",
@@ -64,163 +63,164 @@
                 "Standard_DS1_v2",
                 "Standard_DS2_v2",
                 "Standard_DS3_v2"
-            ]
+            ],
+            "type": "String"
         },
         "adminUsername": {
-            "type": "String",
-            "defaultValue": "caadmin"
+            "defaultValue": "caadmin",
+            "type": "String"
         },
         "virtualNetworkName": {
-            "type": "String",
-            "defaultValue": "hybrtrial1-vnet"
+            "defaultValue": "hybrtrial1-vnet",
+            "type": "String"
         },
         "networkInterfaceName": {
-            "type": "String",
-            "defaultValue": "hybrtrial1-nic"
+            "defaultValue": "hybrtrial1-nic",
+            "type": "String"
         },
         "networkSecurityGroupName": {
-            "type": "String",
-            "defaultValue": "hybrtrial1-nsg"
+            "defaultValue": "hybrtrial1-nsg",
+            "type": "String"
         },
         "adminPassword": {
-            "type": "SecureString",
-            "defaultValue": "Kottee2050Cbe"
+            "defaultValue": "Kottee2050Cbe",
+            "type": "SecureString"
         },
         "subnetName": {
-            "type": "String",
-            "defaultValue": "default"
+            "defaultValue": "default",
+            "type": "String"
         },
         "publicIpAddressName": {
-            "type": "String",
-            "defaultValue": "hybrtrial1-ip"
+            "defaultValue": "hybrtrial1-ip",
+            "type": "String"
         },
         "publicIpAddressType": {
-            "type": "String",
-            "defaultValue": "Dynamic"
+            "defaultValue": "Dynamic",
+            "type": "String"
         },
         "publicIpAddressSku": {
-            "type": "String",
-            "defaultValue": "Basic"
+            "defaultValue": "Basic",
+            "type": "String"
         },
         "dbMaxSizeBytes": {
-            "type": "String",
-            "defaultValue": "2147483648"
+            "defaultValue": "2147483648",
+            "type": "String"
         },
         "dbServerName": {
-            "type": "String",
-            "defaultValue": "trisultrialsqlserver"
+            "defaultValue": "trisultrialsqlserver",
+            "type": "String"
         },
         "dbServerLocation": {
-            "type": "String",
-            "defaultValue": "southeastasia"
+            "defaultValue": "southeastasia",
+            "type": "String"
         },
         "dbServerUserName": {
-            "type": "String",
-            "defaultValue": "caadmin"
+            "defaultValue": "caadmin",
+            "type": "String"
         },
         "dbServerPassword": {
-            "type": "SecureString",
-            "defaultValue": "Kottee2050Cbe"
+            "defaultValue": "Kottee2050Cbe",
+            "type": "SecureString"
         },
         "dbCollation": {
-            "type": "String",
-            "defaultValue": "SQL_Latin1_General_CP1_CI_AS"
+            "defaultValue": "SQL_Latin1_General_CP1_CI_AS",
+            "type": "String"
         },
         "hybrDatabaseName": {
-            "type": "String",
-            "defaultValue": "Hybr"
+            "defaultValue": "Hybr",
+            "type": "String"
         },
         "vconnectDatabaseName": {
-            "type": "String",
-            "defaultValue": "VConnect"
+            "defaultValue": "VConnect",
+            "type": "String"
         },
         "billingDatabaseName": {
-            "type": "String",
-            "defaultValue": "Billing"
+            "defaultValue": "Billing",
+            "type": "String"
         },
         "ServiceCatalogDB": {
-            "type": "String",
-            "defaultValue": "ServiceCatalogDB"
+            "defaultValue": "ServiceCatalogDB",
+            "type": "String"
         },
         "RMSStoreDB": {
-            "type": "String",
-            "defaultValue": "RMSStoreDB"
+            "defaultValue": "RMSStoreDB",
+            "type": "String"
         },
         "RMSResoruceManagerDB": {
-            "type": "String",
-            "defaultValue": "RMSResoruceManagerDB"
+            "defaultValue": "RMSResoruceManagerDB",
+            "type": "String"
         },
         "RMSTrackingDB": {
-            "type": "String",
-            "defaultValue": "RMSTrackingDB"
+            "defaultValue": "RMSTrackingDB",
+            "type": "String"
         },
         "AADClientID": {
-            "type": "String",
-            "defaultValue": "ddf09c62-40d0-46a1-81e9-5593a289fa74"
+            "defaultValue": "ddf09c62-40d0-46a1-81e9-5593a289fa74",
+            "type": "String"
         },
         "AADClientSecretID": {
-            "type": "String",
-            "defaultValue": "TAAYfCn?J6DcHKtDNhfvj6n7n:LO:z?0"
+            "defaultValue": "TAAYfCn?J6DcHKtDNhfvj6n7n:LO:z?0",
+            "type": "String"
         },
         "SubDomainName": {
-            "type": "String",
-            "defaultValue": "demo"
+            "defaultValue": "demo",
+            "type": "String"
         },
         "AdminUserMail": {
-            "type": "String",
-            "defaultValue": "venkatr@cloudassert.com"
+            "defaultValue": "venkatr@cloudassert.com",
+            "type": "String"
         },
         "Orgname": {
-            "type": "String",
-            "defaultValue": "CA"
+            "defaultValue": "CA",
+            "type": "String"
         },
         "Issuer_URL": {
-            "type": "String",
-            "defaultValue": "https://sts.windows.net/95166198-b865-4294-8d11-496c85b7978a/"
+            "defaultValue": "https://sts.windows.net/95166198-b865-4294-8d11-496c85b7978a/",
+            "type": "String"
         },
         "HybrEndPoint": {
-            "type": "String",
-            "defaultValue": "https://tidel.admin.hybr.com"
+            "defaultValue": "https://tidel.admin.hybr.com",
+            "type": "String"
         },
         "HybrApiKey": {
-            "type": "String",
-            "defaultValue": "hybradmin"
+            "defaultValue": "hybradmin",
+            "type": "String"
         },
         "HybrApiSecret": {
-            "type": "String",
-            "defaultValue": "pass@word1"
+            "defaultValue": "pass@word1",
+            "type": "String"
         },
         "SMTPServername": {
-            "type": "String",
-            "defaultValue": "smtp.office365.com"
+            "defaultValue": "smtp.office365.com",
+            "type": "String"
         },
         "SMTPPortNo": {
-            "type": "String",
-            "defaultValue": "587"
+            "defaultValue": "587",
+            "type": "String"
         },
         "SMTPUserName": {
-            "type": "String",
-            "defaultValue": "demo@ca.com"
+            "defaultValue": "demo@ca.com",
+            "type": "String"
         },
         "STMPPassword": {
-            "type": "String",
-            "defaultValue": "pass@word1"
+            "defaultValue": "pass@word1",
+            "type": "String"
         },
         "SMTPFrom": {
-            "type": "String",
-            "defaultValue": "demo@ca.com"
+            "defaultValue": "demo@ca.com",
+            "type": "String"
         },
         "dbEdition": {
-            "type": "String",
-            "defaultValue": "Basic"
+            "defaultValue": "Basic",
+            "type": "String"
         },
         "dbRequestedServiceObjectiveId": {
-            "type": "String",
-            "defaultValue": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c"
+            "defaultValue": "dd6d99bb-f193-4ec1-86f2-43d3bccbc49c",
+            "type": "String"
         },
         "customPsScript": {
-            "type": "String",
-            "defaultValue": "https://hybrfile.blob.core.windows.net/hybrfiles/StartDeployment.ps1?sp=r&st=2019-10-29T11:13:16Z&se=2019-11-08T19:13:16Z&spr=https,http&sv=2019-02-02&sr=b&sig=SOagNuySU8PpI9fE6HtWutug5M1g0ufA8jgk4tUOWEE%3D"
+            "defaultValue": "https://hybrfile.blob.core.windows.net/hybrfiles/StartDeployment.ps1?sp=r&st=2019-10-29T11:13:16Z&se=2019-11-08T19:13:16Z&spr=https,http&sv=2019-02-02&sr=b&sig=SOagNuySU8PpI9fE6HtWutug5M1g0ufA8jgk4tUOWEE%3D",
+            "type": "String"
         }
     },
     "variables": {
