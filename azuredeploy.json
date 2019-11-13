@@ -86,7 +86,7 @@
             "type": "String"
         },
         "adminPassword": {
-            "defaultValue": "Null",
+            "defaultValue": "",
             "type": "SecureString"
         },
         "subnetName": {
