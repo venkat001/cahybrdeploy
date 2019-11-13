@@ -83,7 +83,7 @@
             "type": "String"
         },
         "adminPassword": {
-            "defaultValue": "Kottai2050Cbe",
+            "defaultValue": "Null",
             "type": "SecureString"
         },
         "subnetName": {
@@ -115,11 +115,11 @@
             "type": "String"
         },
         "dbServerUserName": {
-            "defaultValue": "caadmin",
+            "defaultValue": "Null",
             "type": "String"
         },
         "dbServerPassword": {
-            "defaultValue": "Kottai2050Cbe",
+            "defaultValue": "Null",
             "type": "SecureString"
         },
         "dbCollation": {
