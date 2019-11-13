@@ -73,6 +73,10 @@
                 "description":"Login Name for Virtual Machine"
             }
         },
+        "adminPassword": {
+            "defaultValue": "",
+            "type": "SecureString"
+        },
         "virtualNetworkName": {
             "defaultValue": "hybrtrial-vnet",
             "type": "String"
@@ -84,10 +88,6 @@
         "networkSecurityGroupName": {
             "defaultValue": "hybrtrial-nsg",
             "type": "String"
-        },
-        "adminPassword": {
-            "defaultValue": "",
-            "type": "SecureString"
         },
         "subnetName": {
             "defaultValue": "default",
@@ -118,11 +118,11 @@
             "type": "String"
         },
         "dbServerUserName": {
-            "defaultValue": "Null",
+            "defaultValue": "",
             "type": "String"
         },
         "dbServerPassword": {
-            "defaultValue": "Null",
+            "defaultValue": "",
             "type": "SecureString"
         },
         "dbCollation": {
