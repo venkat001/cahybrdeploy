@@ -68,7 +68,10 @@
         },
         "adminUsername": {
             "defaultValue": "caadmin",
-            "type": "String"
+            "type": "String",
+            "metadata":{
+                "description":"UserName for Virtual Machine"
+            }
         },
         "virtualNetworkName": {
             "defaultValue": "hybrtrial-vnet",
