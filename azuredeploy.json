@@ -70,7 +70,7 @@
             "defaultValue": "caadmin",
             "type": "String",
             "metadata":{
-                "description":"UserName for Virtual Machine"
+                "description":"Login Name for Virtual Machine"
             }
         },
         "virtualNetworkName": {
