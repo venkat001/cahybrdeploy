@@ -368,6 +368,19 @@
                             "destinationAddressPrefix": "*",
                             "destinationPortRange": "3389"
                         }
+                    },
+                    {
+                        "name": "default-allow-https",
+                        "properties":{
+                            "priority":998,
+                            "protocol":"Tcp",
+                            "access":"Allow",
+                            "direction":"Inbound",
+                            "sourceAddressPrefix": "*",
+                            "sourcePortRange": "*",
+                            "destinationAddressPrefix": "*",
+                            "destinationPortRange": "443"
+                        }
                     }
                 ]
             }
