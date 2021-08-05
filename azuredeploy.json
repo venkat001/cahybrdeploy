@@ -110,7 +110,7 @@
             "type": "String"
         },
         "dbServerName": {
-            "defaultValue": "trisulsqlserver",
+            "defaultValue": "venkatsqlserver",
             "type": "String"
         },
         "dbServerLocation": {
