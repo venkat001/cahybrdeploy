@@ -110,7 +110,7 @@
             "type": "String"
         },
         "dbServerName": {
-            "defaultValue": "venkatsqlserver",
+            "defaultValue": "demosqlserver",
             "type": "String"
         },
         "dbServerLocation": {
