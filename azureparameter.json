@@ -6,7 +6,7 @@
       "value": "Southeast Asia"
     },
     "virtualMachineName": {
-      "value": "hybrdemo"
+      "value": "hybrdemovm"
     },
     "virtualMachineSize": {
       "value": "Standard_DS2_v2"

@@ -110,7 +110,7 @@
             "type": "String"
         },
         "dbServerName": {
-            "defaultValue": "demosqlserver",
+            "defaultValue": "mssqlserver",
             "type": "String"
         },
         "dbServerLocation": {
